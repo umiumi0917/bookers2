@@ -1,7 +1,4 @@
-<%= render 'users/userinfo', user: @user %>
-<%= render 'new', book: @book %>
-<h3>Books</h3>
-<% @books.each do |book| %>
+<% books.each do |book| %>
 <div>
   <p><%= image_tag book.user.get_profile_image(100,100) %></p>
   <%= link_to book_path(book.id) do %>
@@ -11,5 +8,3 @@
 </div>
 <% end %>
 <%= paginate books %>
-
-<p>index</p>
